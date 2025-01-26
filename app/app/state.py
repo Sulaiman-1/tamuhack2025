@@ -102,9 +102,50 @@ class State(rx.State):
 
         print(f"Loaded {len(self.vehicles)} vehicles from {db_path}.")
 
+    def set_category(self, category: str):
+        """Set the category."""
+        self.category = category
 
+    def set_item(self, item: str):
+        """Set the item."""
+        self.item = item
 
+    category: str = ""
+    item: str = ""
+    category_entry: str = ""
+    item_entry: str = ""
 
+    def filter_vehicles(self):
+        """Filter vehicles based on the category and item."""
+        if not self.category or not self.item:
+            return self.vehicles
+
+        filtered = []
+
+        for i in range(len(self.vehicles)):
+            if self.category.lower() == 'base model' and self.vehicles[i].basemodel.lower() == self.item.lower():
+                filtered.append(self.vehicles[i])
+            elif self.category.lower() == 'cylinders' and self.vehicles[i].cylinders == int(self.item):
+                filtered.append(self.vehicles[i])
+            elif self.category.lower() == 'displ' and self.vehicles[i].displ == float(self.item):
+                filtered.append(self.vehicles[i])
+            elif self.category.lower() == 'drive' and self.vehicles[i].drive.lower() == self.item.lower():
+                filtered.append(self.vehicles[i])
+            elif self.category.lower() == 'fueltype1' and self.vehicles[i].fueltype1.lower() == self.item.lower():
+                filtered.append(self.vehicles[i])
+            elif self.category.lower() == 'model' and self.vehicles[i].model.lower() == self.item.lower():
+                filtered.append(self.vehicles[i])
+            elif self.category.lower() == 'transmission	' and self.vehicles[i].trany.lower() == self.item.lower():
+                filtered.append(self.vehicles[i])
+            elif self.category.lower() == 'vehicle class' and self.vehicles[i].vclass.lower() == self.item.lower():
+                filtered.append(self.vehicles[i])
+            elif self.category.lower() == 'year' and self.vehicles[i].year == int(self.item):
+                filtered.append(self.vehicles[i])
+            elif self.category.lower() == 'save-spend' and self.vehicles[i].yousavespend == int(self.item):
+                filtered.append(self.vehicles[i])
+
+        self.vehicles = filtered
+    
     def on_home_page(self):
         return rx.redirect("/")
     

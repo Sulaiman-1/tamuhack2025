@@ -51,5 +51,27 @@ def sorting_table_example():
 def compare_page() -> rx.Component:
     return rx.container(
         navigation_bar(),
+        rx.hstack(
+            rx.input(
+                placeholder="Enter category...",
+                on_change=State.set_category,
+                value=State.category_entry,
+                width="300px"
+            ),
+            rx.input(
+                placeholder="Enter item...",
+                on_change=State.set_item,
+                value=State.item_entry,
+                width="300px"
+            ),
+            rx.button(
+                "search",
+                background_color="maroon",
+                color="white",
+                on_click=State.filter_vehicles,
+            ),
+            justify_content="center",
+            padding="20px"
+        ),
         sorting_table_example()
     )
