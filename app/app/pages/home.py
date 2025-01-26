@@ -5,12 +5,18 @@ from ..state import State
 def ribbon():
     return rx.hstack(
         rx.color_mode.button(position="top-right"),
-        rx.button("Models"),
-        rx.button("Compare"),
-        rx.button("About Us"),
-        bg="gray.100",
-        p="2",
-        border_bottom="1px solid gray.200",
+        rx.button(
+            "Models",
+            on_click=State.on_models_page,
+        ),
+        rx.button(
+            "Compare",
+            on_click=State.on_compare_page,
+        ),
+        rx.button(
+            "About Us",
+            on_click=State.on_about_us_page,
+        ),
     ),
 
 @rx.page(route="/", on_load=State.on_home_page)
