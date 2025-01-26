@@ -22,7 +22,6 @@ def show_vehicle(vehicle: Vehicle):
 def sorting_table_example():
     """Render the table with vehicle details."""
     return rx.vstack(
-        navigation_bar(),
         rx.table.root(
             rx.table.header(
                 rx.table.row(
@@ -50,4 +49,7 @@ def sorting_table_example():
 
 @rx.page(route="/compare")
 def compare_page() -> rx.Component:
-    return sorting_table_example()
+    return rx.container(
+        navigation_bar(),
+        sorting_table_example()
+    )
