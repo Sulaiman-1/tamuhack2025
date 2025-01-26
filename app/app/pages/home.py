@@ -5,7 +5,7 @@ from ..components import navigation_bar
 
 
 
-@rx.page(route="/", on_load=State.on_home_page)
+@rx.page(route="/")
 def home_page() -> rx.Component:
     return rx.container(
         navigation_bar(),
