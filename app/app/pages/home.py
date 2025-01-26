@@ -13,7 +13,7 @@ def ribbon():
         border_bottom="1px solid gray.200",
     ),
 
-@rx.page(route="/home", on_load=State.on_home_page)
+@rx.page(route="/", on_load=State.on_home_page)
 def home_page() -> rx.Component:
     return rx.container(
         ribbon(),

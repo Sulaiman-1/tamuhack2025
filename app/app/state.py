@@ -6,5 +6,5 @@ class State(rx.State):
 
 
     def on_home_page(self):
-        return rx.redirect("/home")
+        return rx.redirect("/")
     ...
