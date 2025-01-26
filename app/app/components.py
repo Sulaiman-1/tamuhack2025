@@ -33,6 +33,14 @@ def navigation_bar():
                 "padding": "27px",
             }
         ),
+        rx.button(
+            "Populate Vehicles",
+            on_click=State.populate_cars,
+                style={
+                "padding": "27px",
+            },
+            background_color = "green"
+        ),
 
         style = {
             "display": "flex",
@@ -40,7 +48,5 @@ def navigation_bar():
             "background-color": "#003366",
             "padding": "13px",
             "border-radius": "6px",
-
-
         }
     ),
