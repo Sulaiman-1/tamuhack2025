@@ -26,14 +26,15 @@ def home_page() -> rx.Component:
                 margin_bottom="10px",
             ),
             rx.container(rx.heading("Find Your Dream Car Today With Toyotapedia",
-                       size="9",
-                       color="black",
-                       text_align="center",
-                       font_weight="bold",
-                       font_family="Helvetica, Arial, sans-serif"
+                        size="9",
+                        color="black",
+                        text_align="center",
+                        font_weight="bold",
+                        font_family="Georgia, serif",
+
             ),
             style = {
-                "background-color": "white",
+                "background-color": "lightgray",
                 "border-radius": "25px"
             },
             ),
