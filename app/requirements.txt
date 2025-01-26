@@ -1,2 +1,11 @@
+#framework
 reflex==0.6.8
+
+#info retrieval
 requests
+
+#gemini
+google-generativeai
+
+# env
+python-dotenv
