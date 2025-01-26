@@ -9,7 +9,11 @@ def show_vehicle(vehicle: Vehicle):
         rx.table.cell(vehicle.basemodel),
         rx.table.cell(vehicle.model),
         rx.table.cell(vehicle.year),
-        rx.table.cell(vehicle.trany),  # Fixed attribute name
+        rx.table.cell(vehicle.trany),
+        rx.table.cell(vehicle.drive),
+        rx.table.cell(vehicle.yousavespend),
+        rx.table.cell(vehicle.cylinders),
+        rx.table.cell(vehicle.displ)  # Fixed attribute name
     )
 
 
@@ -24,6 +28,10 @@ def sorting_table_example():
                     rx.table.column_header_cell("Model"),
                     rx.table.column_header_cell("Year"),
                     rx.table.column_header_cell("Transmission"),
+                    rx.table.column_header_cell("Drive"),
+                    rx.table.column_header_cell("Save-Spend"),
+                    rx.table.column_header_cell("Cylinders"),
+                    rx.table.column_header_cell("Displ"),
                 ),
             ),
             rx.table.body(
