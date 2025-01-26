@@ -16,21 +16,26 @@ def home_page() -> rx.Component:
         ), 
         rx.vstack(
             rx.image(
-                src="https://www.pngmart.com/files/22/Toyota-Tacoma-PNG-Isolated-HD.png",  # Path to your image file
+                src="https://media.discordapp.net/attachments/1332821505415053434/1333034767423111218/DALLE_2025-01-26_01.31.16_-_A_lineup_of_flagship_Toyota_vehicles_including_SUVs_sedans_and_hybrids_displayed_in_a_dramatic_and_elegant_dark_scene_slightly_more_zoomed_in_to_.png?ex=67976cdf&is=67961b5f&hm=776aea40c05466fb64668f9d69b6203ce5fbca56df3840ac1c25217142b4d830&=&format=webp&quality=lossless&width=1591&height=909",  # Path to your image file
                 alt="Toyota Vehicles", 
-                width="80%", 
-                height="280px",  # Set a specific height to ensure it works with object_fit
+                width="100%", 
+                height="500px",  # Set a specific height to ensure it works with object_fit
                 object_fit="cover",  # Ensures the image covers the container fully
                 border_radius="15px",
-                margin_top="110px",
-                margin_bottom="390px",
+                margin_top="20px",
+                margin_bottom="10px",
             ),
-            rx.heading(
+            rx.container(rx.heading("Find Your Dream Car Today With Toyotapedia",
                        size="9",
-                       color="white",
+                       color="black",
                        text_align="center",
                        font_weight="bold",
                        font_family="Helvetica, Arial, sans-serif"
+            ),
+            style = {
+                "background-color": "white",
+                "border-radius": "25px"
+            },
             ),
             # Use an HStack to arrange images side by side
             rx.hstack(
