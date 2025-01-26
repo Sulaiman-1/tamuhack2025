@@ -12,6 +12,7 @@ def about_us_page() -> rx.Component:
                 src="https://blogmedia.dealerfire.com/wp-content/uploads/sites/767/2022/03/2021-Toyota-Tacoma_o.jpg",
                 width="1280px",
                 height="auto",
+                border_radius = "10px"
             ),
             
             # About Us Content

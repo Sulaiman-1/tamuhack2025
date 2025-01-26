@@ -10,28 +10,33 @@ def navigation_bar():
             on_click=State.on_home_page,
             style={
                 "padding": "27px",
-            }
+            },
+            background_color = "maroon"
         ),
         rx.button(
             "Models",
             on_click=State.on_models_page,
                 style={
                 "padding": "27px",
-            }
+            },
+            background_color = "maroon"
         ),
         rx.button(
             "Compare",
             on_click=State.on_compare_page,
                 style={
                 "padding": "27px",
-            }
+            },
+            background_color = "maroon"
         ),
         rx.button(
             "About Us",
             on_click=State.on_about_us_page,
                 style={
                 "padding": "27px",
-            }
+                
+            },
+            background_color = "maroon  "
         ),
         rx.button(
             "Populate Vehicles",
@@ -39,13 +44,14 @@ def navigation_bar():
                 style={
                 "padding": "27px",
             },
-            background_color = "green"
+            background_color = "lightgray",
+            color = "black",
         ),
 
         style = {
             "display": "flex",
             "justify-content": "space-evenly",
-            "background-color": "#003366",
+            "background-color": "maroon",
             "padding": "13px",
             "border-radius": "6px",
         }
