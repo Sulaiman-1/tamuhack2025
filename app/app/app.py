@@ -1,6 +1,6 @@
 from .pages.home import home_page
-from .pages.models import models_page
 from .pages.compare import compare_page
+from .pages.models import models_page
 from .pages.about_us import about_us_page
 import reflex as rx
 
